@@ -1,5 +1,34 @@
+@font-face {
+  font-family: 'FuturaBold';
+  font-style: normal;
+  font-weight: 400;
+  src: 
+    local('Futura2'),  
+    url('./fonts/FuturaNewBold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'FuturaLight';
+  font-style: normal;
+  font-weight: 400;
+  src: 
+    local('Futura2'),  
+    url('./fonts/FuturaNewLight.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'FuturaOblique';
+  font-style: normal;
+  font-weight: 400;
+  src: 
+    local('Futura2'),  
+    url('./fonts/FuturaNewMediumOblique.otf') format('opentype');
+}
+
 .App {
   text-align: center;
+  padding: 50px 150px 50px 150px;
+  font-family: 'FuturaBold';
 }
 
 .App-logo {
@@ -30,4 +59,139 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.logobar {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.logobar p {
+  font-size: 25px;
+  margin-right: 10px;
+  font-style: italic;
+  vertical-align: -5px;
+  font-family: 'FuturaOblique';
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-top: 18px;
+}
+
+.highlight {
+  display: grid;
+  grid-template-columns: 66% auto;
+  grid-column-gap: 30px;
+  position: relative;
+  height: 500px;
+}
+
+.highlight-video {
+  position: absolute;
+  background: #282c34;
+  width: 40%;
+  height: 350px;
+  border-radius: 6px;
+  z-index: 1;
+}
+
+.highlight-background {
+  position: absolute;
+  left: 28%;
+  top: 150px;
+}
+
+.highlight-content {
+  text-align: start;
+  font-size: 20px;
+}
+
+.highlight-content h2 {
+  font-family: 'FuturaBold';
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 800;
+  font-size: 50px;
+}
+
+.highlight-content p {
+  font-family: 'FuturaLight';
+  color: rgb(0,0,0,0.8);
+}
+
+.product-tiles {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+}
+
+.product-tile {
+  display: table;
+  width: 100%;
+  height: 300px;
+  background: blue;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.16);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.product-tile:hover {
+  cursor: pointer;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.18), 0 10px 10px rgba(0,0,0,0.16);
+  filter: brightness(115%);
+}
+
+.product-tile p {
+  align-self: center;
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 30px;
+  color: white;
+  font-weight: 800;
+}
+
+.product-tile:nth-child(4n-4) {
+  background-color: #08AEEA;
+  background-image: linear-gradient(315deg, #08AEEA 0%, #2AF598 100%);
+}
+.product-tile:nth-child(4n-3) {
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+.product-tile:nth-child(4n-2) {
+  background-color: #D9AFD9;
+  background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+}
+.product-tile:nth-child(4n-1) {
+  background-color: #FBDA61;
+  background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+}
+
+.cta {
+  font-family: 'FuturaBold';
+  margin-top: 10px;
+  display: inline-block;
+  padding: 20px 80px 20px 80px;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.16);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+  font-size: 22px;
+  color: white;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.cta:hover {
+  cursor: pointer;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.18), 0 10px 10px rgba(0,0,0,0.16);
+  filter: brightness(115%);
+  transform: translateX(10px);
 }
